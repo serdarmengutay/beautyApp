@@ -4,7 +4,7 @@ import { SafeAreaView, Text } from 'react-native'
 const App: React.FC = () => {
   return (
     <SafeAreaView>
-      <Text>App</Text>
+      <Text>This is a pr test commit</Text>
     </SafeAreaView>
   )
 }
