@@ -1,12 +1,19 @@
-import React from 'react'
-import { SafeAreaView, Text } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native'
+import BottomTabNavigator from './navigations/BottomTabNavigator';
+import StackNavigator from './helper/stack-navigator';
+import { Stack } from './helper/stack-navigator';
 
-const App: React.FC = () => {
+const Router: React.FC = () => {
   return (
-    <SafeAreaView>
-      <Text>This is a third way to open pr</Text>
-    </SafeAreaView>
+   <NavigationContainer>
+      <StackNavigator>
+         <Stack.Screen 
+         name="BottomTabNavigator"
+         component={BottomTabNavigator}
+         />
+      </StackNavigator>
+   </NavigationContainer>
   )
 }
 
-export default App;
+export default Router;
