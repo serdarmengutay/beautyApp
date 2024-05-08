@@ -3,9 +3,9 @@ import { TabNavProps } from "../types/navigation-props";
 
 export const Tab = createBottomTabNavigator();
 
-const TabNavigator: React.FC<TabNavProps> = ({ children }: TabNavProps) => {
+const TabNavigator: React.FC<TabNavProps> = ({ children, screenOptions}: TabNavProps) => {
     return (
-        <Tab.Navigator screenOptions={{ headerShown: false }}>
+        <Tab.Navigator screenOptions={screenOptions}>
         {children}
         </Tab.Navigator>
     );
