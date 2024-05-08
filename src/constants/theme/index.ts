@@ -51,12 +51,5 @@ export const theme = {
         lg: '0px 0px 24px rgba(0, 0, 0, 0.1)',
         xl: '0px 0px 40px rgba(0, 0, 0, 0.1)',
     },
-    alignment: {
-        center: 'center',
-        start: 'flex-start',
-        end: 'flex-end',
-        spaceBetween: 'space-between',
-        spaceAround: 'space-around',
-
-    }
+  
 }
