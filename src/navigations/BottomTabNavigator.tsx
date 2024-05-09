@@ -7,7 +7,6 @@ import {searchHiddenTabBar} from '../constants/hiddenTabBarPages/search-hidden-t
 import { selectTabBarIcon } from '../utils/tab-bar-icon';
 import TabNavigator from '../helper/tab-navigator';
 import {Tab} from '../helper/tab-navigator';
-import { tabBarStyle } from '../constants/theme/tabBarStyle';
 import { theme } from '../constants/theme';
 
 

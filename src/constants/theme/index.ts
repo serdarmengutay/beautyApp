@@ -5,7 +5,8 @@ const palette = {
     green: '#00FF00',
     blue: '#0000FF',
     yellow: '#FFD700',
-    purple: '#6440FE'
+    purple: '#6440FE',
+    softWhite: '#E5E5E5'
 };
 
 export const theme = {

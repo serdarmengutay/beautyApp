@@ -12,5 +12,5 @@ export interface StackScreenProps {
     options?: any;
 }
 export interface NavigationProps  {
-  navigation: NavigationProp<any>
+  navigation: NavigationProp<any> | any;
 }
