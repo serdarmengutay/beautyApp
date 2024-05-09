@@ -5,12 +5,13 @@ const palette = {
     green: '#00FF00',
     blue: '#0000FF',
     yellow: '#FFD700',
+    purple: '#6440FE'
 };
 
 export const theme = {
     palette,
     colors: {
-        primary: palette.red,
+        primary: palette.purple,
         secondary: palette.green,
         tertiary: palette.blue,
         background: palette.white,

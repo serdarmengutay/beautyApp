@@ -5,7 +5,8 @@ export const Tab = createBottomTabNavigator();
 
 const TabNavigator: React.FC<TabNavProps> = ({ children, screenOptions}: TabNavProps) => {
     return (
-        <Tab.Navigator screenOptions={screenOptions}>
+        <Tab.Navigator
+        screenOptions={screenOptions}>
         {children}
         </Tab.Navigator>
     );
