@@ -6,7 +6,8 @@ const palette = {
     blue: '#0000FF',
     yellow: '#FFD700',
     purple: '#6440FE',
-    softWhite: '#E5E5E5'
+    softWhite: '#E5E5E5',
+    lightGrey: '#C7C9D9',
 };
 
 export const theme = {
@@ -20,6 +21,7 @@ export const theme = {
         error: palette.red,
         success: palette.green,
         warning: palette.yellow,
+        border: palette.lightGrey
     },
     spacing: {
         xs: 4,
@@ -53,5 +55,6 @@ export const theme = {
         lg: '0px 0px 24px rgba(0, 0, 0, 0.1)',
         xl: '0px 0px 40px rgba(0, 0, 0, 0.1)',
     },
+    activeOpacity: 0.8,
   
 }
