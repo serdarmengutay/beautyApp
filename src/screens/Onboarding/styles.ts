@@ -29,11 +29,11 @@ export const styles = StyleSheet.create({
         lineHeight: 23,
       },
       indicator: {
-        height: 10,
-        width: 10,
         backgroundColor: 'gray',
         marginHorizontal: 3,
         borderRadius: 10,
+        height: 10,
+        width: 10,
       },
       btn: {
         flex: 1,
