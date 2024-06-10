@@ -61,7 +61,7 @@ const OnboardingScreen: React.FC<NavigationProps> = ({ navigation }) => {
         <View style={{marginBottom: 20}}>
           <View style={{height: 50}}>
             {currentSlideIndex == slidesData.length - 1 ? (
-              <TouchableOpacity style={[styles.btn]} onPress={() => navigation.replace('HomeScreen')}>
+              <TouchableOpacity style={[styles.btn]} onPress={() => navigation.replace('BottomTabNavigator')}>
                 <Text
                   style={{fontWeight: 'bold', fontSize: 15, color: 'black'}}>
                   GET STARTED
@@ -118,7 +118,7 @@ const OnboardingScreen: React.FC<NavigationProps> = ({ navigation }) => {
   const Skip = () => {
     const lastSlidesIndex = slidesData.length - 1;
     const offset = lastSlidesIndex * Width;
-    ref?.current.scrollToOffset({offset});
+     ref?.current?.scrollToOffset({offset});
     setCurrentSlideIndex(lastSlidesIndex);
   };
   return (
