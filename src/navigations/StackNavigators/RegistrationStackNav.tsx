@@ -8,9 +8,9 @@ import RegistrationStepThree from '../../screens/Auth/RegistrationStepOne'
 const RegistrationStackNav = () => {
     return (
         <StackNavigator>
-            <Stack.Screen  name='RegistrationStepOne' component={RegistrationStepOne}/> 
-            <Stack.Screen  name='RegistrationStepTwo' component={RegistrationStepTwo}/> 
-            <Stack.Screen  name='RegistrationStepThree' component={RegistrationStepThree}/> 
+            <Stack.Screen name='RegistrationStepOne' component={RegistrationStepOne}/> 
+            <Stack.Screen name='RegistrationStepTwo' component={RegistrationStepTwo}/> 
+            <Stack.Screen name='RegistrationStepThree' component={RegistrationStepThree}/> 
         </StackNavigator>
     )
 }

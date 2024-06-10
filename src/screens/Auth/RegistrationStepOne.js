@@ -1,51 +1,64 @@
-import {useState} from 'react';
+import React, {useState} from 'react';
 import {
   KeyboardAvoidingView,
-  SafeAreaView,
   ScrollView,
-  StatusBar,
   StyleSheet,
   View,
+  TouchableWithoutFeedback,
 } from 'react-native';
-import Button from '../../components/Button';
-import Input from '../../components/Input';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 import {isIOS} from '../../constants/platform';
-import RegisterHeader from '../../components/RegisterHeader';
 import {theme} from '../../constants/theme';
+import keyboardDismiss from '../../utils/keyboardDismiss';
+import RegisterHeader from '../../components/RegisterHeader';
+import Button from '../../components/Button';
+import Input from '../../components/Input';
 
 const RegistrationStepOne = () => {
   const [showPassword, setShowPassword] = useState(false);
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleRegister = () => {
+    // Registration logic here
+    console.log('Register', {name, email, password});
+  };
 
   return (
-    <View style={styles.container}>
-      <RegisterHeader />
-      <KeyboardAvoidingView
-        style={{flex: 1}}
-        behavior={isIOS ? 'padding' : 'height'}>
-        <ScrollView
-          showsVerticalScrollIndicator={false}
+    <TouchableWithoutFeedback onPress={keyboardDismiss}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        bounces={false}
+        style={styles.container}
+        contentContainerStyle={styles.contentContainerStyle}>
+        <RegisterHeader />
+        <KeyboardAvoidingView
           style={{flex: 1}}
-          contentContainerStyle={styles.contentContainerStyle}>
+          behavior={isIOS ? 'padding' : 'height'}>
           <View style={styles.inputContainer}>
             <Input
               label="Name"
               placeholder="Enter your name"
-              onChangeText={text => console.log(text)}
-              icon={<Icon name="" size={20} />}
+              onChangeText={text => setName(text)}
+              value={name}
+              icon={<Icon name="account" size={20} />}
             />
             <Input
               label="Email"
               placeholder="Enter your email"
               keyboardType="email-address"
-              onChangeText={text => console.log(text)}
+              onChangeText={text => setEmail(text)}
+              value={email}
+              icon={<Icon name="email" size={20} />}
             />
             <Input
               label="Password"
               placeholder="Enter your password"
-              keyboardType="password"
-              onChangeText={text => console.log(text)}
+              keyboardType="default"
+              onChangeText={text => setPassword(text)}
               secureTextEntry={!showPassword}
+              value={password}
               iconPressed={() => setShowPassword(!showPassword)}
               icon={
                 showPassword ? (
@@ -57,11 +70,11 @@ const RegistrationStepOne = () => {
             />
           </View>
           <View style={styles.registerBtn}>
-            <Button title="Register" onPress={() => console.log('Register')} />
+            <Button title="SignUp" onPress={handleRegister} />
           </View>
-        </ScrollView>
-      </KeyboardAvoidingView>
-    </View>
+        </KeyboardAvoidingView>
+      </ScrollView>
+    </TouchableWithoutFeedback>
   );
 };
 
@@ -73,12 +86,16 @@ const styles = StyleSheet.create({
   },
   contentContainerStyle: {
     flexGrow: 1,
+    justifyContent: 'space-between',
   },
   inputContainer: {
     marginHorizontal: theme.spacing.md,
     marginTop: theme.spacing.xl,
   },
   registerBtn: {
-    marginTop: theme.spacing.xl,
+    bottom: 30,
+    position: 'absolute',
+    width: '100%',
+    marginBottom: theme.spacing.xl,
   },
 });
