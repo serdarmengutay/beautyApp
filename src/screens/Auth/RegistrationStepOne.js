@@ -14,7 +14,7 @@ import RegisterHeader from '../../components/RegisterHeader';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 
-const RegistrationStepOne = () => {
+const RegistrationStepOne = ({navigation}) => {
   const [showPassword, setShowPassword] = useState(false);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -32,7 +32,7 @@ const RegistrationStepOne = () => {
         bounces={false}
         style={styles.container}
         contentContainerStyle={styles.contentContainerStyle}>
-        <RegisterHeader />
+        <RegisterHeader navigation={navigation} />
         <KeyboardAvoidingView
           style={{flex: 1}}
           behavior={isIOS ? 'padding' : 'height'}>
