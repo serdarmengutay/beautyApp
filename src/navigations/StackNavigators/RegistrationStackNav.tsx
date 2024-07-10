@@ -1,8 +1,8 @@
 import React from 'react'
 import StackNavigator, { Stack } from '../../helper/stack-navigator'
 import RegistrationStepOne from '../../screens/Auth/RegistrationStepOne'
-import RegistrationStepTwo from '../../screens/Auth/RegistrationStepOne'
-import RegistrationStepThree from '../../screens/Auth/RegistrationStepOne'
+import RegistrationStepTwo from '../../screens/Auth/RegistrationStepTwo'
+import RegistrationStepThree from '../../screens/Auth/RegistrationStepThree'
 
 
 const RegistrationStackNav = () => {

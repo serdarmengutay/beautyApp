@@ -8,6 +8,7 @@ const palette = {
     purple: '#6440FE',
     softWhite: '#E5E5E5',
     lightGrey: '#C7C9D9',
+    gray: '#808080'
 };
 
 export const theme = {
@@ -21,7 +22,8 @@ export const theme = {
         error: palette.red,
         success: palette.green,
         warning: palette.yellow,
-        border: palette.lightGrey
+        border: palette.lightGrey,
+        gray: palette.gray,
     },
     spacing: {
         xs: 4,

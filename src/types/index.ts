@@ -17,4 +17,5 @@ export interface InputProps {
     label?: string;
     icon?: any;
     iconPressed?: () => void;
+    autoCapitalize?: 'none' | 'sentences' | 'words' | 'characters';
 }

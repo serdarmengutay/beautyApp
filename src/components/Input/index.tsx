@@ -4,7 +4,7 @@ import { InputProps } from '../../types'
 import { theme } from '../../constants/theme'
 
 
-const Input: React.FC<InputProps> = ({ icon, iconPressed, onChangeText, label, value, secureTextEntry, placeholder }, props: any) => {
+const Input: React.FC<InputProps> = ({ icon, autoCapitalize, iconPressed, onChangeText, label, value, secureTextEntry, placeholder }, props: any) => {
     return (
         <View style={styles.container}>
             <Text style={styles.labelStyle}>{label}</Text>
@@ -15,6 +15,9 @@ const Input: React.FC<InputProps> = ({ icon, iconPressed, onChangeText, label, v
             secureTextEntry={secureTextEntry}
             placeholder={placeholder}
             style={styles.input}
+            autoCapitalize={autoCapitalize}
+            autoComplete='off'
+            autoCorrect={false}
             {...props}
             />
             {icon && <TouchableOpacity onPress={iconPressed} activeOpacity={theme.activeOpacity} style={styles.icon}>{icon}</TouchableOpacity>}

@@ -23,6 +23,9 @@ const RegistrationStepOne = ({navigation}) => {
   const handleRegister = () => {
     // Registration logic here
     console.log('Register', {name, email, password});
+    navigation.navigate('RegistrationStepTwo', {
+      userData: {name, email, password},
+    });
   };
 
   return (
@@ -41,6 +44,8 @@ const RegistrationStepOne = ({navigation}) => {
               label="Name"
               placeholder="Enter your name"
               onChangeText={text => setName(text)}
+              autoCapitalize="none"
+              autoCorrect={false}
               value={name}
               icon={<Icon name="account" size={20} />}
             />
@@ -49,6 +54,8 @@ const RegistrationStepOne = ({navigation}) => {
               placeholder="Enter your email"
               keyboardType="email-address"
               onChangeText={text => setEmail(text)}
+              autoCapitalize="none"
+              autoCorrect={false}
               value={email}
               icon={<Icon name="email" size={20} />}
             />
