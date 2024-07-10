@@ -8,9 +8,9 @@ import {
   TouchableOpacity,
   Alert,
 } from 'react-native';
-import {theme} from '../../constants/theme';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import Button from '../../components/Button';
+import Icon from '../../../components/Icon';
+import {theme} from '../../../constants/theme';
+import Button from '../../../components/Button';
 
 const OTPScreen = ({navigation}) => {
   const inputRefs = [useRef(null), useRef(null), useRef(null), useRef(null)];
@@ -32,7 +32,7 @@ const OTPScreen = ({navigation}) => {
 
   const handleRegister = () => {
     console.log('otp', otp);
-    navigation.navigate('BottomTabNavigator');
+    navigation.replace('BottomTabNavigator');
   };
 
   const handleGoBack = () => {

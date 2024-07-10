@@ -7,7 +7,7 @@ const RegisterHeader: React.FC<NavigationProps> = ({ navigation }) => {
         <View style={styles.container}>
             <View style={styles.textContainer}>
                 <Text style={styles.title}>Sign Up</Text>
-                <Text style={styles.text}>Already have an account ? <Text onPress={() => navigation.navigate('Login')} style={styles.loginText}>Login</Text></Text>
+                <Text style={styles.text}>Already have an account ? <Text onPress={() => navigation.replace('Login')} style={styles.loginText}>Login</Text></Text>
             </View>
         </View>
     )

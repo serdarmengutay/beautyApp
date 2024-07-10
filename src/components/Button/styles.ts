@@ -12,6 +12,16 @@ export const styles = StyleSheet.create({
         marginHorizontal: theme.spacing.md,
         height: 50
     },
+    disabledButtonContainer: {
+        backgroundColor: '#ddd',
+        padding: 10,
+        borderRadius: theme.borderRadius.sm,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginHorizontal: theme.spacing.md,
+        height: 50
+    },
     buttonText: {
         color: theme.palette.white,
         textAlign: 'center',

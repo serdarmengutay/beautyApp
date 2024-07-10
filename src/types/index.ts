@@ -5,6 +5,7 @@ export interface ButtonProps {
     title: string;
     icon?: string;
     onPress: () => void;
+    isDisabled?: boolean;
 }
 
 // Input Props

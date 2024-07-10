@@ -6,13 +6,13 @@ import {
   View,
   TouchableWithoutFeedback,
 } from 'react-native';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-import {isIOS} from '../../constants/platform';
-import {theme} from '../../constants/theme';
-import keyboardDismiss from '../../utils/keyboardDismiss';
-import RegisterHeader from '../../components/RegisterHeader';
-import Button from '../../components/Button';
-import Input from '../../components/Input';
+import Icon from '../../../components/Icon';
+import {isIOS} from '../../../constants/platform';
+import {theme} from '../../../constants/theme';
+import keyboardDismiss from '../../../utils/keyboardDismiss';
+import RegisterHeader from '../../../components/RegisterHeader';
+import Button from '../../../components/Button';
+import Input from '../../../components/Input';
 
 const RegistrationStepOne = ({navigation}) => {
   const [showPassword, setShowPassword] = useState(false);

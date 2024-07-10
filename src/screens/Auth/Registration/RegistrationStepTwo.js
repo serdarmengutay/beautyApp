@@ -7,11 +7,11 @@ import {
   SafeAreaView,
   TouchableOpacity,
 } from 'react-native';
-import {theme} from '../../constants/theme';
-import keyboardDismiss from '../../utils/keyboardDismiss';
-import Button from '../../components/Button';
 import PhoneInput from 'react-native-phone-number-input';
-import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Icon from '../../../components/Icon';
+import {theme} from '../../../constants/theme';
+import keyboardDismiss from '../../../utils/keyboardDismiss';
+import Button from '../../../components/Button';
 
 const RegistrationStepTwo = ({navigation}) => {
   const [phoneNumber, setPhoneNumber] = useState('');
@@ -48,6 +48,7 @@ const RegistrationStepTwo = ({navigation}) => {
             defaultValue={phoneNumber}
             countryPickerButtonStyle={styles.countryPickerButtonStyle}
             codeTextStyle={styles.codeTextStyle}
+            textContainerStyle={styles.textContainerStyle}
             textInputStyle={styles.textInputStyle}
             defaultCode="TR"
             placeholder="Enter phone number"
@@ -73,7 +74,6 @@ const RegistrationStepTwo = ({navigation}) => {
               setFormattedPhoneNumber(text);
             }}
             containerStyle={styles.containerStyle}
-            textContainerStyle={styles.textContainerStyle}
           />
         </View>
         <View style={styles.registerBtn}>
@@ -97,7 +97,8 @@ const styles = StyleSheet.create({
   containerStyle: {
     marginTop: theme.spacing.lg,
     height: 40,
-    borderColor: theme.palette.lightGrey,
+    borderColor: theme.palette.softWhite,
+    backgroundColor: theme.palette.softWhite,
     borderRadius: 12,
   },
   inputLabel: {
@@ -121,6 +122,10 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     height: 40,
     paddingLeft: 10,
+  },
+  textContainerStyle: {
+    backgroundColor: theme.palette.softWhite,
+    borderRadius: 12,
   },
   registerBtn: {
     bottom: 30,
