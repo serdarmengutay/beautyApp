@@ -10,16 +10,16 @@ const Router: React.FC = () => {
    <NavigationContainer>
       <StackNavigator>
       <Stack.Screen 
+         name="BottomTabNavigator"
+         component={BottomTabNavigator}
+         />
+      <Stack.Screen 
          name="RegistrationStack"
          component={RegistrationStackNav}
          />
       <Stack.Screen 
          name="OnboardingScreen"
          component={OnboardingScreen}
-         />
-         <Stack.Screen 
-         name="BottomTabNavigator"
-         component={BottomTabNavigator}
          />
       </StackNavigator>
    </NavigationContainer>
