@@ -32,7 +32,8 @@ export const slidesData = [
       "type": "Park",
       "area_sq_km": 3.41,
       "visitors_per_year": 42000000,
-      "established": "1858"
+      "established": "1858",
+      "image": require("../../assets/images/centralPark.jpg")
     },
     {
       "id": 2,
@@ -45,7 +46,8 @@ export const slidesData = [
       "type": "Monument",
       "height_m": 324,
       "visitors_per_year": 7000000,
-      "established": "1889"
+      "established": "1889",
+      "image": require("../../assets/images/centralPark.jpg")
     },
     {
       "id": 3,
@@ -58,7 +60,8 @@ export const slidesData = [
       "type": "Historical Site",
       "length_km": 21196,
       "visitors_per_year": 10000000,
-      "established": "7th Century BC"
+      "established": "7th Century BC",
+      "image": require("../../assets/images/centralPark.jpg")
     },
     {
       "id": 4,
@@ -71,7 +74,8 @@ export const slidesData = [
       "type": "Theater",
       "seating_capacity": 5738,
       "visitors_per_year": 8500000,
-      "established": "1973"
+      "established": "1973",
+      "image": require("../../assets/images/centralPark.jpg")
     },
     {
       "id": 5,
@@ -84,7 +88,8 @@ export const slidesData = [
       "type": "Historical Site",
       "capacity": 50000,
       "visitors_per_year": 6000000,
-      "established": "AD 80"
+      "established": "AD 80",
+      "image": require("../../assets/images/centralPark.jpg")
     },
     {
       "id": 6,
@@ -97,7 +102,8 @@ export const slidesData = [
       "type": "Monument",
       "height_m": 93,
       "visitors_per_year": 4300000,
-      "established": "1886"
+      "established": "1886",
+      "image": require("../../assets/images/centralPark.jpg") 
     },
     {
       "id": 7,
@@ -110,7 +116,8 @@ export const slidesData = [
       "type": "Historical Site",
       "elevation_m": 2430,
       "visitors_per_year": 1500000,
-      "established": "15th Century"
+      "established": "15th Century",
+      "image": require("../../assets/images/centralPark.jpg")
     },
     {
       "id": 8,
@@ -122,7 +129,8 @@ export const slidesData = [
       "address": "Dharmapuri, Forest Colony, Tajganj, Agra, Uttar Pradesh 282001",
       "type": "Monument",
       "visitors_per_year": 8000000,
-      "established": "1643"
+      "established": "1643",
+      "image": require("../../assets/images/centralPark.jpg")
     },
     {
       "id": 9,
@@ -135,7 +143,8 @@ export const slidesData = [
       "type": "Monument",
       "height_m": 30,
       "visitors_per_year": 2000000,
-      "established": "1931"
+      "established": "1931",
+      "image": require("../../assets/images/centralPark.jpg")
     },
     {
       "id": 10,
@@ -148,7 +157,8 @@ export const slidesData = [
       "type": "Museum",
       "collection_size": 380000,
       "visitors_per_year": 9600000,
-      "established": "1793"
+      "established": "1793",
+      "image": require("../../assets/images/centralPark.jpg")
     },
     {
       "id": 11,
@@ -161,7 +171,8 @@ export const slidesData = [
       "type": "Bridge",
       "length_m": 2737,
       "visitors_per_year": 10000000,
-      "established": "1937"
+      "established": "1937",
+      "image": require("../../assets/images/centralPark.jpg")
     },
     {
       "id": 12,
@@ -174,7 +185,8 @@ export const slidesData = [
       "type": "Historical Site",
       "number_of_pyramids": 3,
       "visitors_per_year": 14000000,
-      "established": "2580–2560 BC"
+      "established": "2580–2560 BC",
+      "image": require("../../assets/images/centralPark.jpg")
     },
     {
       "id": 13,
@@ -187,7 +199,8 @@ export const slidesData = [
       "type": "Skyscraper",
       "height_m": 828,
       "visitors_per_year": 1500000,
-      "established": "2010"
+      "established": "2010",
+      "image": require("../../assets/images/centralPark.jpg")
     },
     {
       "id": 14,
@@ -200,7 +213,8 @@ export const slidesData = [
       "type": "Island",
       "area_sq_km": 90.8,
       "visitors_per_year": 2000000,
-      "famous_for": "Sunsets"
+      "famous_for": "Sunsets",
+      "image": require("../../assets/images/centralPark.jpg")
     },
     {
       "id": 15,
@@ -213,7 +227,8 @@ export const slidesData = [
       "type": "Waterfall",
       "height_m": 51,
       "visitors_per_year": 13000000,
-      "established": "12,000 years ago"
+      "established": "12,000 years ago",
+      "image": require("../../assets/images/centralPark.jpg")
     }
   ]
 
