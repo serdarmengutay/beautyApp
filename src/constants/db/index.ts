@@ -216,4 +216,23 @@ export const slidesData = [
       "established": "12,000 years ago"
     }
   ]
+
+  export const filterOptions = [
+    {
+      id: 1,
+      name: "Offers",
+    },
+    {
+      id: 2,
+      name: "Category",
+    },
+    {
+      id: 3,
+      name: "Rating",
+    },
+    {
+      id: 4,
+      name: "Gender",
+    },
+  ];
   

@@ -12,7 +12,6 @@ export const styles = StyleSheet.create({
         padding: theme.spacing.sm,
         backgroundColor: theme.palette.white,
         borderRadius: 10,
-        margin: theme.spacing.sm,
         gap: theme.spacing.sm,
     },
     headerText: {
@@ -46,6 +45,75 @@ export const styles = StyleSheet.create({
         borderRadius: theme.spacing.sm,
         padding: theme.spacing.sm,
         gap: theme.spacing.sm,
-    }
-
+    },
+    contentContainerStyle: {
+        padding: theme.spacing.sm,
+        flexGrow: 1,
+    },
+    filterContainer: {
+        padding: theme.spacing.sm,
+        flexDirection: 'row',
+        alignItems: 'center',
+        justifyContent: 'space-evenly',
+    },
+    filterBtn: {
+        paddingHorizontal: theme.spacing.sm,
+        paddingVertical: theme.spacing.xs,
+        backgroundColor: '#eee',
+        borderRadius: 16,
+        alignItems: 'center',
+        justifyContent: 'center',
+        borderWidth: 1,
+        borderColor: theme.colors.border,
+        flexDirection: 'row',
+        marginHorizontal: 5
+    },
+    filterOptionText: {
+        color: theme.palette.black,
+        fontSize: 13,
+        fontWeight: '300',
+    },
+    servicesContainer: {
+        padding: theme.spacing.sm,
+    },
+    servicesHeader: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        padding: theme.spacing.sm,
+    },
+    servicesHeaderText: {
+        fontSize: theme.fontSize.md,
+        color: theme.palette.black,
+        fontWeight: 'bold',
+    },
+    seeAllBtn: {
+        flexDirection: 'row',
+        alignItems: 'center',
+    },
+    servicesHeaderLink: {
+        color: theme.colors.primary,
+        fontWeight: 'bold'
+    },
+    servicesBody: {
+        flexDirection: 'row',
+        flexWrap: 'wrap',
+        justifyContent: 'space-between',
+    },
+    serviceItem: {
+        padding: theme.spacing.sm,
+        backgroundColor: theme.palette.white,
+        borderRadius: 10,
+        marginBottom: theme.spacing.sm,
+    },
+    serviceImage: {
+        width: 100,
+        height: 100,
+        borderRadius: 10,
+    },
+    serviceName: {
+        textAlign: 'center',
+        marginTop: theme.spacing.xs,
+        color: theme.palette.black,
+    },
 });
