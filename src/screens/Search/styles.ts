@@ -178,7 +178,6 @@ export const styles = StyleSheet.create({
   },
   bestOffersBody: {
     flexDirection: 'row',
-    alignItems: 'center',
   },
   bestOffersItem: {
     padding: theme.spacing.sm,
@@ -203,7 +202,8 @@ export const styles = StyleSheet.create({
   },
   bestOffersLocation: {
     fontSize: theme.fontSize.sm,
-    color: theme.palette.black,
+    color: theme.palette.gray,
+    marginVertical: 2,
   },
   offerDiscountContainer: {
     flexDirection: 'row',
@@ -214,8 +214,8 @@ export const styles = StyleSheet.create({
     backgroundColor: theme.palette.white,
     borderRadius: 10,
     position: 'absolute',
-    bottom: 70,
-    left: 20,
+    bottom: 10,
+    left: 0,
     right: 0,
     width: 100,
     margin: theme.spacing.sm,
@@ -223,6 +223,12 @@ export const styles = StyleSheet.create({
   },
   offerDiscountText: {
     color: theme.colors.primary,
+    fontWeight: 'bold',
+    fontSize: 13,
+  },
+  forGenderText: {
+    color: theme.palette.gray,
+    fontSize: theme.fontSize.xs,
     fontWeight: 'bold',
   },
 });

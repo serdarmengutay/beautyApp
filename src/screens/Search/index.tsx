@@ -154,7 +154,10 @@ const Search: React.FC<NavigationProps> = ({ navigation }) => {
               <Icon name="chevron-right" size={22} color={theme.palette.black} />
             </TouchableOpacity>
           </View>
-          <View style={styles.bestOffersBody}>
+          <ScrollView 
+          horizontal
+          showsHorizontalScrollIndicator={false}
+          style={styles.bestOffersBody}>
             {dummyLocationData.map((location) => (
               <TouchableOpacity
                 activeOpacity={theme.activeOpacity}
@@ -162,20 +165,26 @@ const Search: React.FC<NavigationProps> = ({ navigation }) => {
                 style={styles.bestOffersItem}
                 onPress={handleLocationPress}
               >
+                <View>
                 <Image source={location.image} style={styles.bestOffersImage} />
                 <View style={styles.offerDiscountContainer}>
-                <Icon name="chevron-right" size={22} color={theme.palette.black} />
+                <Icon name="chevron-right" size={16} color={theme.palette.black} />
                   <Text style={styles.offerDiscountText}>50% OFF</Text>
                 </View>
+                </View>
                 <View style={styles.bestOffersInfo}>
+                  <Text style={styles.forGenderText}>For Women</Text>
                   <Text style={styles.bestOffersName}>{location.name}</Text>
                   <Text style={styles.bestOffersLocation}>
-                    {location.city}, {location.country}
+                    {location.type} • <Icon name="star-outline" size={16} color={theme.palette.gray}/>{location.visitors_per_year}
+                  </Text>
+                  <Text style={styles.bestOffersLocation}>
+                    {location.country} • {location.city} • $$
                   </Text>
                 </View>
               </TouchableOpacity>
             ))}
-          </View>
+          </ScrollView>
         </View>
       </ScrollView>
     </SafeAreaView>
