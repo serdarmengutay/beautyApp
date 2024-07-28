@@ -1,6 +1,5 @@
 import { useState } from "react";
 import {
-  Button,
   Image,
   SafeAreaView,
   ScrollView,
@@ -12,6 +11,7 @@ import {
 import { NavigationProps } from "../../types/navigation-props";
 import Icon from "../../components/Icon";
 import { theme } from "../../constants/theme";
+import { services } from "../../constants/db";
 import { dummyLocationData, filterOptions } from "../../constants/db";
 import { styles } from "./styles";
 
@@ -29,39 +29,10 @@ const Search: React.FC<NavigationProps> = ({ navigation }) => {
 
   const handleLocationPress = () => {};
 
-  const services = [
-    {
-      id: "1",
-      name: "Haircut",
-      image: require("../../assets/images/haircutImage.png"),
-    },
-    {
-      id: "2",
-      name: "Hair Color",
-      image: require("../../assets/images/shaveForMen.png"),
-    },
-    {
-      id: "3",
-      name: "Hair Spa",
-      image: require("../../assets/images/bleachForWomen.png"),
-    },
-    {
-      id: "4",
-      name: "Facial",
-      image: require("../../assets/images/facialForWomen.png"),
+  const handleServicePressed = (selectedService: any) => {
+    navigation.navigate("BeautyServiceDetail", { data: selectedService });
+  }
 
-    },
-    {
-      id: "5"
-,     name: "Manicure",
-      image: require("../../assets/images/waxingForWomen.png"),
-    },
-    {
-      id: "6",
-      name: "Pedicure",
-      image: require("../../assets/images/waxingForWomen.png"),
-    },
-  ];
 
   return (
     <SafeAreaView style={styles.container}>
@@ -89,7 +60,7 @@ const Search: React.FC<NavigationProps> = ({ navigation }) => {
           </View>
         </View>
         <View style={styles.filterContainer}>
-          {filterOptions.map((option) => (
+          {filterOptions?.map((option) => (
             <TouchableOpacity style={styles.filterBtn} activeOpacity={theme.activeOpacity} key={option.id} onPress={() => {}}>
               <Text style={styles.filterOptionText}>{option.name}</Text>
               <Icon name="chevron-down" size={22} color={theme.palette.black} />
@@ -105,8 +76,8 @@ const Search: React.FC<NavigationProps> = ({ navigation }) => {
             </TouchableOpacity>
           </View>
           <View style={styles.servicesBody}>
-            {services.map((service) => (
-              <TouchableOpacity activeOpacity={theme.activeOpacity} key={service.id} style={styles.serviceItem}>
+            {services?.map((service) => (
+              <TouchableOpacity onPress={() => handleServicePressed(service)} activeOpacity={theme.activeOpacity} key={service.id} style={styles.serviceItem}>
                 <Image source={service.image} style={styles.serviceImage} />
                 <Text style={styles.serviceName}>{service.name}</Text>
               </TouchableOpacity>
